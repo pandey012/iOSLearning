@@ -28,7 +28,7 @@ class PlaySoundsViewController: UIViewController {
     
 
     
-    enum ButtonType : Int{case Slow = 0,Fast, Chipmunk, Vader, Echo, Reverb }
+    enum ButtonType : Int{case Slow = 0,Fast=1, Chipmunk=2, Vader=3, Echo=4, Reverb=5 }
     
     
     override func viewDidLoad() {
@@ -50,7 +50,7 @@ class PlaySoundsViewController: UIViewController {
         case .Slow:
           playSound(rate : 0.5)
         case .Fast:
-          playSound(rate : 5.5)
+          playSound(rate : 1.5)
         case .Chipmunk:
             playSound(rate : 1000)
         case .Vader:
