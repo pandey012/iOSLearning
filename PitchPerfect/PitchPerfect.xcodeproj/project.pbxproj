@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A30321001CE135D7001D4CDC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30320FE1CE135D7001D4CDC /* Fabric.framework */; };
+		A30321011CE135D7001D4CDC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30320FF1CE135D7001D4CDC /* Crashlytics.framework */; };
+		A30321041CE1362A001D4CDC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30321021CE1362A001D4CDC /* Fabric.framework */; };
+		A30321051CE1362A001D4CDC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30321031CE1362A001D4CDC /* Crashlytics.framework */; };
 		A3078F831CDAAF2E005CD7DB /* PitchPerfectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C879D1CCACCAD002E8558 /* PitchPerfectTests.swift */; };
 		A3078F851CDAAF44005CD7DB /* PlaySoundsViewController+Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3078F801CDAAAD0005CD7DB /* PlaySoundsViewController+Audio.swift */; };
 		A30C87891CCACCAD002E8558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C87881CCACCAD002E8558 /* AppDelegate.swift */; };
@@ -36,6 +40,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A30320FE1CE135D7001D4CDC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		A30320FF1CE135D7001D4CDC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		A30321021CE1362A001D4CDC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		A30321031CE1362A001D4CDC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		A3078F801CDAAAD0005CD7DB /* PlaySoundsViewController+Audio.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlaySoundsViewController+Audio.swift"; sourceTree = "<group>"; };
 		A30C87851CCACCAD002E8558 /* PitchPerfect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PitchPerfect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A30C87881CCACCAD002E8558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +66,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A30321011CE135D7001D4CDC /* Crashlytics.framework in Frameworks */,
+				A30321001CE135D7001D4CDC /* Fabric.framework in Frameworks */,
+				A30321051CE1362A001D4CDC /* Crashlytics.framework in Frameworks */,
+				A30321041CE1362A001D4CDC /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +93,10 @@
 		A30C877C1CCACCAD002E8558 = {
 			isa = PBXGroup;
 			children = (
+				A30321021CE1362A001D4CDC /* Fabric.framework */,
+				A30321031CE1362A001D4CDC /* Crashlytics.framework */,
+				A30320FE1CE135D7001D4CDC /* Fabric.framework */,
+				A30320FF1CE135D7001D4CDC /* Crashlytics.framework */,
 				A30C87871CCACCAD002E8558 /* PitchPerfect */,
 				A30C879C1CCACCAD002E8558 /* PitchPerfectTests */,
 				A30C87A71CCACCAD002E8558 /* PitchPerfectUITests */,
@@ -141,6 +157,7 @@
 				A30C87811CCACCAD002E8558 /* Sources */,
 				A30C87821CCACCAD002E8558 /* Frameworks */,
 				A30C87831CCACCAD002E8558 /* Resources */,
+				A30320FD1CE135A8001D4CDC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -199,6 +216,7 @@
 				TargetAttributes = {
 					A30C87841CCACCAD002E8558 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 86K86ML37S;
 					};
 					A30C87981CCACCAD002E8558 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -256,6 +274,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A30320FD1CE135A8001D4CDC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run ad87b323e7785261ee3e333b499b665e0477e462 035b6cd61c7c05b9c6c2fd957a388e43a21a9e799f18c71246b6e90e19eac5c1";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A30C87811CCACCAD002E8558 /* Sources */ = {
@@ -409,6 +443,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CBI.PitchPerfect;
@@ -420,6 +459,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = PitchPerfect/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CBI.PitchPerfect;
