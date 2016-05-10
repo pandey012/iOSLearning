@@ -27,9 +27,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     @IBAction func RecordAudio(sender: AnyObject) {
         
         print("record button pressed")
-        recordingLabel.text = "Recording in progress"
-        stopRecordingButton.enabled = true
-        recordButton.enabled = false
+        
+        setState(false, stopFlag: true,label: "Recording in progress" )
         
         // Record Audio Code
         
@@ -53,9 +52,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
 
     @IBAction func StopRecording(sender: AnyObject){
 
-        stopRecordingButton.enabled = false
-        recordButton.enabled = true
-       recordingLabel.text = "Tap to Record"
+        setState(true, stopFlag: false,label: "Tap to Record" )
         
         //Stop Recording
         
@@ -94,6 +91,13 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
             let recordedAudioURL = sender as! NSURL
             playSoundsVC.recordedAudioURL = recordedAudioURL
         }
+    }
+    
+    func setState(startFlag: Bool, stopFlag: Bool, label: String )
+    {
+        recordButton.enabled = startFlag
+        stopRecordingButton.enabled = stopFlag
+        recordingLabel.text = label
     }
     
 }
