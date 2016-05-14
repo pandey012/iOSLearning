@@ -18,64 +18,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ra2-HG-AjA">
-                                <rect key="frame" x="20" y="64" width="560" height="536"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0is-xR-xTZ">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <state key="normal" image="recordButton">
+                                    <color key="titleColor" red="1" green="0.20106991122234497" blue="0.29945045385289648" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="RecordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4la-ci-DL6"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pQF-25-JFH">
+                                <rect key="frame" x="247" y="371" width="107" height="21"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FbY-2U-3B8">
-                                        <rect key="frame" x="0.0" y="0.0" width="560" height="179"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0is-xR-xTZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="179"/>
-                                                <state key="normal" image="recordButton">
-                                                    <color key="titleColor" red="1" green="0.20106991122234497" blue="0.29945045385289648" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="RecordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4la-ci-DL6"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZP-1t-dcR">
-                                        <rect key="frame" x="0.0" y="179" width="560" height="179"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EP6-If-Vdt">
+                                        <rect key="frame" x="0.0" y="0.0" width="107" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MK4-uF-hTO">
-                                        <rect key="frame" x="0.0" y="358" width="560" height="179"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paT-88-6qR">
-                                                <rect key="frame" x="0.0" y="0.0" width="560" height="179"/>
-                                                <state key="normal" image="stopButton"/>
-                                                <connections>
-                                                    <action selector="StopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D6u-L4-MFu"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paT-88-6qR">
+                                <rect key="frame" x="275" y="418" width="50" height="50"/>
+                                <state key="normal" image="stopButton"/>
+                                <connections>
+                                    <action selector="StopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D6u-L4-MFu"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ra2-HG-AjA" secondAttribute="bottom" id="8AV-kq-E9r"/>
-                            <constraint firstItem="Ra2-HG-AjA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="CGB-9P-1z2"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ra2-HG-AjA" secondAttribute="trailing" id="Vdu-sm-lCI"/>
-                            <constraint firstItem="Ra2-HG-AjA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="zgt-2d-M9v"/>
+                            <constraint firstItem="EP6-If-Vdt" firstAttribute="top" secondItem="0is-xR-xTZ" secondAttribute="bottom" constant="21" id="164-o8-L1d"/>
+                            <constraint firstItem="pQF-25-JFH" firstAttribute="top" secondItem="0is-xR-xTZ" secondAttribute="bottom" constant="21" id="3xe-R8-UUy"/>
+                            <constraint firstItem="pQF-25-JFH" firstAttribute="centerX" secondItem="0is-xR-xTZ" secondAttribute="centerX" id="5Wa-Sw-Myx"/>
+                            <constraint firstItem="0is-xR-xTZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="8Fo-xg-JLA"/>
+                            <constraint firstItem="EP6-If-Vdt" firstAttribute="centerX" secondItem="0is-xR-xTZ" secondAttribute="centerX" id="aVZ-cE-Nxf"/>
+                            <constraint firstItem="0is-xR-xTZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dFf-4m-nn5"/>
+                            <constraint firstItem="paT-88-6qR" firstAttribute="centerX" secondItem="EP6-If-Vdt" secondAttribute="centerX" id="p46-a7-SQw"/>
+                            <constraint firstItem="paT-88-6qR" firstAttribute="top" secondItem="EP6-If-Vdt" secondAttribute="bottom" constant="26" id="ywP-rX-zeU"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qoZ-ee-QPg"/>
                     <connections>
                         <outlet property="recordButton" destination="0is-xR-xTZ" id="gH8-5Z-T10"/>
-                        <outlet property="recordingLabel" destination="hZP-1t-dcR" id="Q9G-lK-tGd"/>
+                        <outlet property="recordingLabel" destination="EP6-If-Vdt" id="Web-sr-cni"/>
                         <outlet property="stopRecordingButton" destination="paT-88-6qR" id="HVn-ig-0zI"/>
                         <segue destination="y21-YL-X0M" kind="show" identifier="stopRecording" id="ILe-kF-zTg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-703" y="-402"/>
+            <point key="canvasLocation" x="-693" y="-385"/>
         </scene>
         <!--Play Sounds View Controller-->
         <scene sceneID="d2o-E8-3Hs">
